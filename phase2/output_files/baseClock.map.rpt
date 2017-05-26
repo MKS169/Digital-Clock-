@@ -1,0 +1,761 @@
+Analysis & Synthesis report for baseClock
+Fri May 26 15:59:28 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: DebounceUnit:db0
+ 11. Parameter Settings for User Entity Instance: DebounceUnit:db1
+ 12. Parameter Settings for User Entity Instance: DebounceUnit:db2
+ 13. Parameter Settings for User Entity Instance: DebounceUnit:db3
+ 14. Parameter Settings for User Entity Instance: freqDivider:freqDiv
+ 15. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2
+ 16. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2
+ 17. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1
+ 18. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1
+ 19. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0
+ 21. Port Connectivity Checks: "Bin2BCD:bin2BCD"
+ 22. Port Connectivity Checks: "press:pressKEY2"
+ 23. Port Connectivity Checks: "press:pressKEY1"
+ 24. Port Connectivity Checks: "press:pressKEY0"
+ 25. Port Connectivity Checks: "freqDivider:freqDiv"
+ 26. Port Connectivity Checks: "DebounceUnit:db3"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 26 15:59:28 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; baseClock                                   ;
+; Top-level Entity Name              ; Clock                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 964                                         ;
+;     Total combinational functions  ; 963                                         ;
+;     Dedicated logic registers      ; 154                                         ;
+; Total registers                    ; 154                                         ;
+; Total pins                         ; 54                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Clock              ; baseClock          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; DebounceUnit.vhd                 ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/DebounceUnit.vhd           ;         ;
+; freqDivider.vhd                  ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/freqDivider.vhd            ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin7SegDecoder.vhd         ;         ;
+; Bin2BCD.vhd                      ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd                ;         ;
+; Clock.vhd                        ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd                  ;         ;
+; workClock.vhd                    ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd              ;         ;
+; press.vhd                        ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/press.vhd                  ;         ;
+; VerifyLeds.vhd                   ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/lpm_divide.tdf                           ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/abs_divider.inc                          ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/sign_div_unsign.inc                      ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/aglobal161.inc                           ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/lpm_divide_jhm.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/alt_u_div_a4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/lpm_divide_q9m.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/alt_u_div_i4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                              ;
++---------------------------------------------+----------------------------+
+; Resource                                    ; Usage                      ;
++---------------------------------------------+----------------------------+
+; Estimated Total logic elements              ; 964                        ;
+;                                             ;                            ;
+; Total combinational functions               ; 963                        ;
+; Logic element usage by number of LUT inputs ;                            ;
+;     -- 4 input functions                    ; 307                        ;
+;     -- 3 input functions                    ; 210                        ;
+;     -- <=2 input functions                  ; 446                        ;
+;                                             ;                            ;
+; Logic elements by mode                      ;                            ;
+;     -- normal mode                          ; 655                        ;
+;     -- arithmetic mode                      ; 308                        ;
+;                                             ;                            ;
+; Total registers                             ; 154                        ;
+;     -- Dedicated logic registers            ; 154                        ;
+;     -- I/O registers                        ; 0                          ;
+;                                             ;                            ;
+; I/O pins                                    ; 54                         ;
+;                                             ;                            ;
+; Embedded Multiplier 9-bit elements          ; 0                          ;
+;                                             ;                            ;
+; Maximum fan-out node                        ; freqDivider:freqDiv|clkOut ;
+; Maximum fan-out                             ; 97                         ;
+; Total fan-out                               ; 3232                       ;
+; Average fan-out                             ; 2.64                       ;
++---------------------------------------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Clock                                    ; 963 (0)             ; 154 (0)                   ; 0           ; 0            ; 0       ; 0         ; 54   ; 0            ; |Clock                                                                                                                 ; Clock               ; work         ;
+;    |Bin2BCD:bin2BCD|                      ; 399 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD                                                                                                 ; Bin2BCD             ; work         ;
+;       |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Div1|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div1|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Div2|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div2|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div2|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div2|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_i4f:divider|    ; 77 (77)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_i4f:divider|    ; 77 (77)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
+;       |lpm_divide:Mod2|                   ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_i4f:divider|    ; 77 (77)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
+;    |Bin7SegDecoder:disp2|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp2                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:disp3|                 ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp3                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:disp4|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp4                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:disp5|                 ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp5                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:disp6|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp6                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:disp7|                 ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:disp7                                                                                            ; Bin7SegDecoder      ; work         ;
+;    |DebounceUnit:db2|                     ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|DebounceUnit:db2                                                                                                ; DebounceUnit        ; work         ;
+;    |freqDivider:freqDiv|                  ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|freqDivider:freqDiv                                                                                             ; freqDivider         ; work         ;
+;    |workClock:workClock|                  ; 268 (268)           ; 96 (96)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|workClock:workClock                                                                                             ; workClock           ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 154   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 108   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Clock|workClock:workClock|min[20]       ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |Clock|DebounceUnit:db2|s_debounceCnt[0] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Clock|workClock:workClock|hour[22]      ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:disp6|decOut_n[3]  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:disp4|decOut_n[6]  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:disp2|decOut_n[3]  ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 102 LEs              ; 68 LEs                 ; No         ; |Clock|Bin7SegDecoder:disp7|decOut_n[3]  ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 102 LEs              ; 68 LEs                 ; No         ; |Clock|Bin7SegDecoder:disp5|decOut_n[3]  ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 102 LEs              ; 68 LEs                 ; No         ; |Clock|Bin7SegDecoder:disp3|decOut_n[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:db0 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 100   ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:db1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 100   ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:db2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 100   ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:db3 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 100   ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freqDivider:freqDiv ;
++----------------+----------+--------------------------------------+
+; Parameter Name ; Value    ; Type                                 ;
++----------------+----------+--------------------------------------+
+; div_factor     ; 50000000 ; Signed Integer                       ;
++----------------+----------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 8              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 8              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                ;
+; LPM_WIDTHD             ; 8              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2BCD:bin2BCD"                                                                            ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; bcdms[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdms1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdms2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "press:pressKEY2"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; pulseout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "press:pressKEY1"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; pulseout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "press:pressKEY0"                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; pulseout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "freqDivider:freqDiv"                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; clkout2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DebounceUnit:db3"                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pulsedout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 54                          ;
+; cycloneiii_ff         ; 154                         ;
+;     CLR               ; 2                           ;
+;     ENA               ; 78                          ;
+;     ENA CLR           ; 30                          ;
+;     plain             ; 44                          ;
+; cycloneiii_lcell_comb ; 968                         ;
+;     arith             ; 308                         ;
+;         2 data inputs ; 164                         ;
+;         3 data inputs ; 144                         ;
+;     normal            ; 660                         ;
+;         0 data inputs ; 31                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 246                         ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 307                         ;
+;                       ;                             ;
+; Max LUT depth         ; 13.50                       ;
+; Average LUT depth     ; 8.16                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri May 26 15:59:15 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off baseClock -c baseClock
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/DebounceUnit.vhd Line: 15
+    Info (12023): Found entity 1: DebounceUnit File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/DebounceUnit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file freqdivider.vhd
+    Info (12022): Found design unit 1: freqDivider-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/freqDivider.vhd Line: 12
+    Info (12023): Found entity 1: freqDivider File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/freqDivider.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin7SegDecoder.vhd Line: 10
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd.vhd
+    Info (12022): Found design unit 1: Bin2BCD-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 17
+    Info (12023): Found entity 1: Bin2BCD File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
+    Info (12022): Found design unit 1: Clock-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 11
+    Info (12023): Found entity 1: Clock File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file longpress.vhd
+    Info (12022): Found design unit 1: LongPress-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/LongPress.vhd Line: 11
+    Info (12023): Found entity 1: LongPress File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/LongPress.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file defmode.vhd
+    Info (12022): Found design unit 1: defMode-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/defMode.vhd Line: 10
+    Info (12023): Found entity 1: defMode File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/defMode.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file workclock.vhd
+    Info (12022): Found design unit 1: workClock-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 12
+    Info (12023): Found entity 1: workClock File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file press.vhd
+    Info (12022): Found design unit 1: press-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/press.vhd Line: 10
+    Info (12023): Found entity 1: press File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/press.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file verifyleds.vhd
+    Info (12022): Found design unit 1: VerifyLeds-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd Line: 10
+    Info (12023): Found entity 1: VerifyLeds File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd Line: 5
+Info (12127): Elaborating entity "Clock" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Clock.vhd(14): object "s_key3" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 14
+Warning (10036): Verilog HDL or VHDL warning at Clock.vhd(15): object "s_LongOut2" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at Clock.vhd(15): object "s_LongOut1" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at Clock.vhd(15): object "s_LongOut0" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at Clock.vhd(17): object "s_clk2" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 17
+Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "DebounceUnit:db0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 24
+Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 44
+Info (12129): Elaborating entity "press" using architecture "A:behavioral" for hierarchy "press:pressKEY0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 50
+Info (12129): Elaborating entity "VerifyLeds" using architecture "A:behavioral" for hierarchy "VerifyLeds:leds" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 65
+Warning (10873): Using initial value X (don't care) for net "ledg[5]" at VerifyLeds.vhd(7) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd Line: 7
+Warning (10873): Using initial value X (don't care) for net "ledg[3]" at VerifyLeds.vhd(7) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd Line: 7
+Warning (10873): Using initial value X (don't care) for net "ledg[1]" at VerifyLeds.vhd(7) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/VerifyLeds.vhd Line: 7
+Info (12129): Elaborating entity "workClock" using architecture "A:behavioral" for hierarchy "workClock:workClock" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at workClock.vhd(19): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at workClock.vhd(35): signal "keys" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at workClock.vhd(36): signal "hour" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at workClock.vhd(37): signal "keys" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at workClock.vhd(38): signal "hour" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 38
+Info (12129): Elaborating entity "Bin2BCD" using architecture "A:behavioral" for hierarchy "Bin2BCD:bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 77
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:disp3" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 88
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 20
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
+Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Div2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/lpm_divide_jhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/alt_u_div_a4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
+Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Mod2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
+    Info (12023): Found entity 1: lpm_divide_q9m File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/lpm_divide_q9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/sign_div_unsign_fkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
+    Info (12023): Found entity 1: alt_u_div_i4f File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/alt_u_div_i4f.tdf Line: 27
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "workClock:workClock|hour[4]" is converted into an equivalent circuit using register "workClock:workClock|hour[4]~_emulated" and latch "workClock:workClock|hour[4]~1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[6]" is converted into an equivalent circuit using register "workClock:workClock|hour[6]~_emulated" and latch "workClock:workClock|hour[6]~5" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[2]" is converted into an equivalent circuit using register "workClock:workClock|hour[2]~_emulated" and latch "workClock:workClock|hour[2]~9" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[5]" is converted into an equivalent circuit using register "workClock:workClock|hour[5]~_emulated" and latch "workClock:workClock|hour[5]~13" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[7]" is converted into an equivalent circuit using register "workClock:workClock|hour[7]~_emulated" and latch "workClock:workClock|hour[7]~17" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[1]" is converted into an equivalent circuit using register "workClock:workClock|hour[1]~_emulated" and latch "workClock:workClock|hour[1]~21" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[3]" is converted into an equivalent circuit using register "workClock:workClock|hour[3]~_emulated" and latch "workClock:workClock|hour[3]~25" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[0]" is converted into an equivalent circuit using register "workClock:workClock|hour[0]~_emulated" and latch "workClock:workClock|hour[0]~29" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[31]" is converted into an equivalent circuit using register "workClock:workClock|hour[31]~_emulated" and latch "workClock:workClock|hour[31]~33" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[30]" is converted into an equivalent circuit using register "workClock:workClock|hour[30]~_emulated" and latch "workClock:workClock|hour[30]~37" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[29]" is converted into an equivalent circuit using register "workClock:workClock|hour[29]~_emulated" and latch "workClock:workClock|hour[29]~41" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[28]" is converted into an equivalent circuit using register "workClock:workClock|hour[28]~_emulated" and latch "workClock:workClock|hour[28]~45" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[27]" is converted into an equivalent circuit using register "workClock:workClock|hour[27]~_emulated" and latch "workClock:workClock|hour[27]~49" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[26]" is converted into an equivalent circuit using register "workClock:workClock|hour[26]~_emulated" and latch "workClock:workClock|hour[26]~53" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[25]" is converted into an equivalent circuit using register "workClock:workClock|hour[25]~_emulated" and latch "workClock:workClock|hour[25]~57" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[24]" is converted into an equivalent circuit using register "workClock:workClock|hour[24]~_emulated" and latch "workClock:workClock|hour[24]~61" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[23]" is converted into an equivalent circuit using register "workClock:workClock|hour[23]~_emulated" and latch "workClock:workClock|hour[23]~65" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[22]" is converted into an equivalent circuit using register "workClock:workClock|hour[22]~_emulated" and latch "workClock:workClock|hour[22]~69" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[21]" is converted into an equivalent circuit using register "workClock:workClock|hour[21]~_emulated" and latch "workClock:workClock|hour[21]~73" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[20]" is converted into an equivalent circuit using register "workClock:workClock|hour[20]~_emulated" and latch "workClock:workClock|hour[20]~77" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[19]" is converted into an equivalent circuit using register "workClock:workClock|hour[19]~_emulated" and latch "workClock:workClock|hour[19]~81" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[18]" is converted into an equivalent circuit using register "workClock:workClock|hour[18]~_emulated" and latch "workClock:workClock|hour[18]~85" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[17]" is converted into an equivalent circuit using register "workClock:workClock|hour[17]~_emulated" and latch "workClock:workClock|hour[17]~89" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[16]" is converted into an equivalent circuit using register "workClock:workClock|hour[16]~_emulated" and latch "workClock:workClock|hour[16]~93" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[15]" is converted into an equivalent circuit using register "workClock:workClock|hour[15]~_emulated" and latch "workClock:workClock|hour[15]~97" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[14]" is converted into an equivalent circuit using register "workClock:workClock|hour[14]~_emulated" and latch "workClock:workClock|hour[14]~101" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[13]" is converted into an equivalent circuit using register "workClock:workClock|hour[13]~_emulated" and latch "workClock:workClock|hour[13]~105" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[12]" is converted into an equivalent circuit using register "workClock:workClock|hour[12]~_emulated" and latch "workClock:workClock|hour[12]~109" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[11]" is converted into an equivalent circuit using register "workClock:workClock|hour[11]~_emulated" and latch "workClock:workClock|hour[11]~113" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[10]" is converted into an equivalent circuit using register "workClock:workClock|hour[10]~_emulated" and latch "workClock:workClock|hour[10]~117" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[9]" is converted into an equivalent circuit using register "workClock:workClock|hour[9]~_emulated" and latch "workClock:workClock|hour[9]~121" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+    Warning (13310): Register "workClock:workClock|hour[8]" is converted into an equivalent circuit using register "workClock:workClock|hour[8]~_emulated" and latch "workClock:workClock|hour[8]~125" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/workClock.vhd Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 8
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 8
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1018 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 49 output pins
+    Info (21061): Implemented 964 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 693 megabytes
+    Info: Processing ended: Fri May 26 15:59:28 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
+
+

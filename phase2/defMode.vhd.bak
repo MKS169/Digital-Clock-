@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity defMode is
+port(en  : in std_logic;
+	  KEY : in std_logic_vector(3 downto 0);
+	  sec, min, hour : in integer;
+	  oSec, oMin, oHour : out integer);
+end defMode;
+
+architecture Behavioral of defMode is
+
+begin
+	process(en)
+	begin
+		if(en = '1') 
