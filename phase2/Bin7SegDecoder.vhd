@@ -19,8 +19,8 @@ begin
 	"0000000" when (binInput = "1000") else --8
 	"0010000" when (binInput = "1001") else --9
 	"0001000" when (binInput = "1010") else --A
-	"1001000" when (binInput = "1011") else --M
-	"0001100" when (binInput = "1100") else --P
+	"0000011" when (binInput = "1011") else --B
+	"1000110" when (binInput = "1100") else --C
 	"0100001" when (binInput = "1101") else --D
 	"0000110" when (binInput = "1110") else --E
 	"0001110" when (binInput = "1111") else --F
