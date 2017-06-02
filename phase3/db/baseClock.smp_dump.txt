@@ -1,0 +1,26 @@
+
+State Machine - |baseClock|lcd_tl:lcd|lcd_controller:c|state
+Name state.process_txd_requests state.power_on_phase8 state.power_on_phase7 state.power_on_phase6 state.power_on_phase5 state.power_on_phase4 state.power_on_phase3 state.power_on_phase2 state.power_on_phase1 
+state.power_on_phase1 0 0 0 0 0 0 0 0 0 
+state.power_on_phase2 0 0 0 0 0 0 0 1 1 
+state.power_on_phase3 0 0 0 0 0 0 1 0 1 
+state.power_on_phase4 0 0 0 0 0 1 0 0 1 
+state.power_on_phase5 0 0 0 0 1 0 0 0 1 
+state.power_on_phase6 0 0 0 1 0 0 0 0 1 
+state.power_on_phase7 0 0 1 0 0 0 0 0 1 
+state.power_on_phase8 0 1 0 0 0 0 0 0 1 
+state.process_txd_requests 1 0 0 0 0 0 0 0 1 
+
+State Machine - |baseClock|Alarm:alm|audio_tl:audio|audio_controller:ac|audio_i2c_controller:i2c|state
+Name state.stop_condition state.in_progress state.start_condition state.idle 
+state.idle 0 0 0 0 
+state.start_condition 0 0 1 1 
+state.in_progress 0 1 0 1 
+state.stop_condition 1 0 0 1 
+
+State Machine - |baseClock|ChronometerDown:chronometerDown|audio_tl:audio|audio_controller:ac|audio_i2c_controller:i2c|state
+Name state.stop_condition state.in_progress state.start_condition state.idle 
+state.idle 0 0 0 0 
+state.start_condition 0 0 1 1 
+state.in_progress 0 1 0 1 
+state.stop_condition 1 0 0 1 

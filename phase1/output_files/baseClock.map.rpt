@@ -1,5 +1,5 @@
 Analysis & Synthesis report for baseClock
-Wed May 17 18:53:31 2017
+Fri Jun 02 12:28:52 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,20 +13,19 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: freqDivider:freqDiv
- 12. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0
- 13. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0
- 14. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1
- 15. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1
- 16. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2
- 17. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2
- 18. Port Connectivity Checks: "Bin2BCD:bin2BCD"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: freqDivider:freqDiv
+ 11. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2
+ 12. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2
+ 13. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1
+ 14. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0
+ 16. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0
+ 17. Port Connectivity Checks: "Bin2BCD:bin2BCD"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +52,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 17 18:53:31 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 12:28:52 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; baseClock                                   ;
 ; Top-level Entity Name              ; Clock                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 771                                         ;
-;     Total combinational functions  ; 771                                         ;
-;     Dedicated logic registers      ; 104                                         ;
-; Total registers                    ; 104                                         ;
+; Total logic elements               ; 840                                         ;
+;     Total combinational functions  ; 840                                         ;
+;     Dedicated logic registers      ; 128                                         ;
+; Total registers                    ; 128                                         ;
 ; Total pins                         ; 53                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -169,8 +168,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,8 +179,8 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
 ; freqDivider.vhd                  ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/freqDivider.vhd            ;         ;
 ; Bin7SegDecoder.vhd               ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin7SegDecoder.vhd         ;         ;
-; Bin2BCD.vhd                      ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd                ;         ;
 ; Clock.vhd                        ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd                  ;         ;
+; Bin2BCD.vhd                      ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd                ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/lpm_divide.tdf                           ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/abs_divider.inc                          ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/sign_div_unsign.inc                      ;         ;
@@ -203,20 +201,20 @@ agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 771                        ;
+; Estimated Total logic elements              ; 840                        ;
 ;                                             ;                            ;
-; Total combinational functions               ; 771                        ;
+; Total combinational functions               ; 840                        ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 288                        ;
-;     -- 3 input functions                    ; 143                        ;
-;     -- <=2 input functions                  ; 340                        ;
+;     -- 4 input functions                    ; 328                        ;
+;     -- 3 input functions                    ; 145                        ;
+;     -- <=2 input functions                  ; 367                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 541                        ;
-;     -- arithmetic mode                      ; 230                        ;
+;     -- normal mode                          ; 585                        ;
+;     -- arithmetic mode                      ; 255                        ;
 ;                                             ;                            ;
-; Total registers                             ; 104                        ;
-;     -- Dedicated logic registers            ; 104                        ;
+; Total registers                             ; 128                        ;
+;     -- Dedicated logic registers            ; 128                        ;
 ;     -- I/O registers                        ; 0                          ;
 ;                                             ;                            ;
 ; I/O pins                                    ; 53                         ;
@@ -224,9 +222,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; freqDivider:freqDiv|clkOut ;
-; Maximum fan-out                             ; 73                         ;
-; Total fan-out                               ; 2507                       ;
-; Average fan-out                             ; 2.56                       ;
+; Maximum fan-out                             ; 97                         ;
+; Total fan-out                               ; 2768                       ;
+; Average fan-out                             ; 2.58                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -235,7 +233,7 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Clock                                    ; 771 (131)           ; 104 (72)                  ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |Clock                                                                                                                 ; Clock               ; work         ;
+; |Clock                                    ; 840 (199)           ; 128 (96)                  ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |Clock                                                                                                                 ; Clock               ; work         ;
 ;    |Bin2BCD:bin2BCD|                      ; 399 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD                                                                                                 ; Bin2BCD             ; work         ;
 ;       |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
@@ -261,7 +259,7 @@ agreement for further details.
 ;          |lpm_divide_q9m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
 ;             |sign_div_unsign_fkh:divider| ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
 ;                |alt_u_div_i4f:divider|    ; 77 (77)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
-;    |Bin7SegDecoder:b7segH1|               ; 54 (54)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH1                                                                                          ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:b7segH1|               ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH1                                                                                          ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segH2|               ; 54 (54)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH2                                                                                          ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segH|                ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH                                                                                           ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segL1|               ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segL1                                                                                          ; Bin7SegDecoder      ; work         ;
@@ -272,27 +270,17 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; hour[8..31]                            ; Lost fanout        ;
-; Total Number of Removed Registers = 24 ;                    ;
-+----------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 104   ;
+; Total registers                              ; 128   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -302,16 +290,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Clock|min[0]                             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segH|decOut_n[0]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segH1|decOut_n[0] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Clock|hour[7]                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Clock|min[23]                            ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segH2|decOut_n[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segH1|decOut_n[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segH|decOut_n[0]  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segL2|decOut_n[3] ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segL1|decOut_n[3] ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segL|decOut_n[3]  ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segL1|decOut_n[6] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |Clock|Bin7SegDecoder:b7segL2|decOut_n[6] ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH|decOut_n[3]  ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH1|decOut_n[3] ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH2|decOut_n[6] ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH2|decOut_n[3] ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH1|decOut_n[6] ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 96 LEs               ; 74 LEs                 ; No         ; |Clock|Bin7SegDecoder:b7segH|decOut_n[6]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
@@ -326,7 +315,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -349,7 +338,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0 ;
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -418,7 +407,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2 ;
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -441,7 +430,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2 ;
+; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -483,22 +472,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 53                          ;
-; cycloneiii_ff         ; 104                         ;
-;     ENA               ; 7                           ;
-;     plain             ; 97                          ;
-; cycloneiii_lcell_comb ; 772                         ;
-;     arith             ; 230                         ;
-;         2 data inputs ; 115                         ;
-;         3 data inputs ; 115                         ;
-;     normal            ; 542                         ;
+; cycloneiii_ff         ; 128                         ;
+;     plain             ; 128                         ;
+; cycloneiii_lcell_comb ; 841                         ;
+;     arith             ; 255                         ;
+;         2 data inputs ; 141                         ;
+;         3 data inputs ; 114                         ;
+;     normal            ; 586                         ;
 ;         0 data inputs ; 31                          ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 191                         ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 288                         ;
+;         2 data inputs ; 192                         ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 328                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.90                       ;
-; Average LUT depth     ; 9.00                        ;
+; Average LUT depth     ; 8.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -517,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 17 18:53:17 2017
+    Info: Processing started: Fri Jun 02 12:28:39 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off baseClock -c baseClock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -530,12 +518,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file freqdiv
 Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
     Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin7SegDecoder.vhd Line: 10
     Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin7SegDecoder.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd.vhd
-    Info (12022): Found design unit 1: Bin2BCD-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 17
-    Info (12023): Found entity 1: Bin2BCD File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
     Info (12022): Found design unit 1: Clock-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 11
     Info (12023): Found entity 1: Clock File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd.vhd
+    Info (12022): Found design unit 1: Bin2BCD-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 17
+    Info (12023): Found entity 1: Bin2BCD File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 5
 Info (12127): Elaborating entity "Clock" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "HEX7[7]" at Clock.vhd(8) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
 Warning (10873): Using initial value X (don't care) for net "HEX6[7]" at Clock.vhd(8) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
@@ -544,17 +532,17 @@ Warning (10873): Using initial value X (don't care) for net "HEX4[7]" at Clock.v
 Warning (10873): Using initial value X (don't care) for net "HEX3[7]" at Clock.vhd(8) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
 Warning (10873): Using initial value X (don't care) for net "HEX2[7]" at Clock.vhd(8) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
 Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 20
-Info (12129): Elaborating entity "Bin2BCD" using architecture "A:behavioral" for hierarchy "Bin2BCD:bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 40
-Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:b7segH" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 51
+Info (12129): Elaborating entity "Bin2BCD" using architecture "A:behavioral" for hierarchy "Bin2BCD:bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 43
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:b7segH" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 54
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 20
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 23
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 24
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 19
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Div0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 20
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 23
+Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Div2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -569,8 +557,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 20
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Mod0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 20
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 24
+Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Mod2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Bin2BCD.vhd Line: 24
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -589,7 +577,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
     Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 8
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
@@ -597,14 +584,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 7
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/Clock.vhd Line: 7
-Info (21057): Implemented 824 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 893 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 771 logic cells
+    Info (21061): Implemented 840 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 687 megabytes
-    Info: Processing ended: Wed May 17 18:53:31 2017
-    Info: Elapsed time: 00:00:14
+    Info: Peak virtual memory: 692 megabytes
+    Info: Processing ended: Fri Jun 02 12:28:52 2017
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:27
 
 

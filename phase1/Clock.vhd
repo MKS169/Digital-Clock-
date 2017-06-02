@@ -35,7 +35,7 @@ freqDiv: entity work.freqDivider(Behavioral)
 				hour <= hour + 1;
 			end if;
 			if(hour = 23) then
-				hour = 0;
+				hour <= 0;
 			end if;
 		end if;
 	end process;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for baseClock
-Mon May 29 19:53:07 2017
+Fri Jun 02 18:03:58 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,30 +13,47 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: freqDivider:freqDiv
- 13. Parameter Settings for User Entity Instance: freqDivider:freqDiv2
- 14. Parameter Settings for User Entity Instance: debouncer:db0
- 15. Parameter Settings for User Entity Instance: debouncer:db1
- 16. Parameter Settings for User Entity Instance: debouncer:db2
- 17. Parameter Settings for User Entity Instance: debouncer:db3
- 18. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0
- 19. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0
- 20. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1
- 21. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1
- 22. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2
- 23. Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2
- 24. Port Connectivity Checks: "debouncer:db3"
- 25. Port Connectivity Checks: "debouncer:db2"
- 26. Port Connectivity Checks: "debouncer:db1"
- 27. Port Connectivity Checks: "debouncer:db0"
- 28. Port Connectivity Checks: "Bin2BCD:bin2BCD"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: freqDivider:freqDiv
+ 15. Parameter Settings for User Entity Instance: freqDivider:freqDiv2
+ 16. Parameter Settings for User Entity Instance: freqDivider:freqDiv3
+ 17. Parameter Settings for User Entity Instance: debouncer:db0
+ 18. Parameter Settings for User Entity Instance: debouncer:db1
+ 19. Parameter Settings for User Entity Instance: debouncer:db2
+ 20. Parameter Settings for User Entity Instance: debouncer:db3
+ 21. Parameter Settings for User Entity Instance: Set:almsetMin
+ 22. Parameter Settings for User Entity Instance: Set:almsetHour
+ 23. Parameter Settings for User Entity Instance: Clock:clkIn|freqDivider:freqDiv
+ 24. Parameter Settings for User Entity Instance: Clock:clkIn|freqDivider:freqDiv2
+ 25. Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db0
+ 26. Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db1
+ 27. Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db2
+ 28. Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db3
+ 29. Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Mod0
+ 30. Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Div0
+ 31. Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Mod1
+ 32. Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Div1
+ 33. Port Connectivity Checks: "Clock:clkIn|debouncer:db3"
+ 34. Port Connectivity Checks: "Clock:clkIn|debouncer:db2"
+ 35. Port Connectivity Checks: "Clock:clkIn|debouncer:db1"
+ 36. Port Connectivity Checks: "Clock:clkIn|debouncer:db0"
+ 37. Port Connectivity Checks: "Clock:clkIn|Bin2BCD:bin2BCD"
+ 38. Port Connectivity Checks: "Clock:clkIn"
+ 39. Port Connectivity Checks: "Set:almsetHour"
+ 40. Port Connectivity Checks: "Set:almsetMin"
+ 41. Port Connectivity Checks: "debouncer:db3"
+ 42. Port Connectivity Checks: "debouncer:db2"
+ 43. Port Connectivity Checks: "debouncer:db1"
+ 44. Port Connectivity Checks: "debouncer:db0"
+ 45. Port Connectivity Checks: "Bin2BCD1:a_bin2BCD"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -63,16 +80,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 29 19:53:07 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 18:03:58 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; baseClock                                   ;
-; Top-level Entity Name              ; Clock                                       ;
+; Top-level Entity Name              ; Alarm                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 654                                         ;
-;     Total combinational functions  ; 646                                         ;
-;     Dedicated logic registers      ; 127                                         ;
-; Total registers                    ; 127                                         ;
-; Total pins                         ; 72                                          ;
+; Total logic elements               ; 652                                         ;
+;     Total combinational functions  ; 647                                         ;
+;     Dedicated logic registers      ; 176                                         ;
+; Total registers                    ; 176                                         ;
+; Total pins                         ; 67                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -86,7 +103,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; Clock              ; baseClock          ;
+; Top-level entity name                                                      ; Alarm              ; baseClock          ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -179,7 +196,8 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,6 +211,9 @@ agreement for further details.
 ; Bin2BCD.vhd                      ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd                ;         ;
 ; Clock.vhd                        ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd                  ;         ;
 ; debouncer.vhd                    ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/debouncer.vhd              ;         ;
+; Bin2BCD1.vhd                     ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd               ;         ;
+; Alarm.vhd                        ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd                  ;         ;
+; Set.vhd                          ; yes             ; User VHDL File               ; C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Set.vhd                    ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/lpm_divide.tdf                           ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/abs_divider.inc                          ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/programas/altera_lite/quartus/libraries/megafunctions/sign_div_unsign.inc                      ;         ;
@@ -213,81 +234,163 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 654            ;
+; Estimated Total logic elements              ; 652            ;
 ;                                             ;                ;
-; Total combinational functions               ; 646            ;
+; Total combinational functions               ; 647            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 295            ;
-;     -- 3 input functions                    ; 104            ;
-;     -- <=2 input functions                  ; 247            ;
+;     -- 4 input functions                    ; 197            ;
+;     -- 3 input functions                    ; 130            ;
+;     -- <=2 input functions                  ; 320            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 465            ;
-;     -- arithmetic mode                      ; 181            ;
+;     -- normal mode                          ; 390            ;
+;     -- arithmetic mode                      ; 257            ;
 ;                                             ;                ;
-; Total registers                             ; 127            ;
-;     -- Dedicated logic registers            ; 127            ;
+; Total registers                             ; 176            ;
+;     -- Dedicated logic registers            ; 176            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 72             ;
+; I/O pins                                    ; 67             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 70             ;
-; Total fan-out                               ; 2383           ;
-; Average fan-out                             ; 2.60           ;
+; Maximum fan-out                             ; 92             ;
+; Total fan-out                               ; 2387           ;
+; Average fan-out                             ; 2.49           ;
 +---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Clock                                    ; 646 (359)           ; 127 (57)                  ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |Clock                                                                                                                 ; Clock               ; work         ;
-;    |Bin2BCD:bin2BCD|                      ; 125 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD                                                                                                 ; Bin2BCD             ; work         ;
-;       |lpm_divide:Mod0|                   ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_q9m:auto_generated|  ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
-;             |sign_div_unsign_fkh:divider| ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
-;                |alt_u_div_i4f:divider|    ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
-;       |lpm_divide:Mod1|                   ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_q9m:auto_generated|  ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
-;             |sign_div_unsign_fkh:divider| ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
-;                |alt_u_div_i4f:divider|    ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
-;       |lpm_divide:Mod2|                   ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_q9m:auto_generated|  ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
-;             |sign_div_unsign_fkh:divider| ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
-;                |alt_u_div_i4f:divider|    ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
-;    |Bin7SegDecoder:b7segH1|               ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH1                                                                                          ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:b7segH2|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH2                                                                                          ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:b7segH|                ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segH                                                                                           ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:b7segL1|               ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segL1                                                                                          ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:b7segL2|               ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segL2                                                                                          ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:b7segL|                ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|Bin7SegDecoder:b7segL                                                                                           ; Bin7SegDecoder      ; work         ;
-;    |debouncer:db0|                        ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|debouncer:db0                                                                                                   ; debouncer           ; work         ;
-;    |debouncer:db1|                        ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|debouncer:db1                                                                                                   ; debouncer           ; work         ;
-;    |debouncer:db2|                        ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|debouncer:db2                                                                                                   ; debouncer           ; work         ;
-;    |debouncer:db3|                        ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|debouncer:db3                                                                                                   ; debouncer           ; work         ;
-;    |freqDivider:freqDiv2|                 ; 54 (54)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|freqDivider:freqDiv2                                                                                            ; freqDivider         ; work         ;
-;    |freqDivider:freqDiv|                  ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|freqDivider:freqDiv                                                                                             ; freqDivider         ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Alarm                                    ; 647 (48)            ; 176 (2)                   ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |Alarm                                                                                                                    ; Alarm               ; work         ;
+;    |Bin2BCD1:a_bin2BCD|                   ; 77 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD                                                                                                 ; Bin2BCD1            ; work         ;
+;       |lpm_divide:Mod0|                   ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 48 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_i4f:divider|    ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
+;                |alt_u_div_i4f:divider|    ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin2BCD1:a_bin2BCD|lpm_divide:Mod1|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
+;    |Bin7SegDecoder:a_b7segH1|             ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin7SegDecoder:a_b7segH1                                                                                           ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:a_b7segH2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin7SegDecoder:a_b7segH2                                                                                           ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:a_b7segL1|             ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin7SegDecoder:a_b7segL1                                                                                           ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:a_b7segL2|             ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Bin7SegDecoder:a_b7segL2                                                                                           ; Bin7SegDecoder      ; work         ;
+;    |Clock:clkIn|                          ; 88 (45)             ; 50 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Clock:clkIn                                                                                                        ; Clock               ; work         ;
+;       |freqDivider:freqDiv|               ; 43 (43)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Clock:clkIn|freqDivider:freqDiv                                                                                    ; freqDivider         ; work         ;
+;    |Set:almsetHour|                       ; 139 (139)           ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Set:almsetHour                                                                                                     ; Set                 ; work         ;
+;    |Set:almsetMin|                        ; 140 (140)           ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|Set:almsetMin                                                                                                      ; Set                 ; work         ;
+;    |debouncer:db0|                        ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|debouncer:db0                                                                                                      ; debouncer           ; work         ;
+;    |debouncer:db1|                        ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|debouncer:db1                                                                                                      ; debouncer           ; work         ;
+;    |debouncer:db2|                        ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|debouncer:db2                                                                                                      ; debouncer           ; work         ;
+;    |debouncer:db3|                        ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|debouncer:db3                                                                                                      ; debouncer           ; work         ;
+;    |freqDivider:freqDiv2|                 ; 53 (53)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|freqDivider:freqDiv2                                                                                               ; freqDivider         ; work         ;
+;    |freqDivider:freqDiv3|                 ; 53 (53)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|freqDivider:freqDiv3                                                                                               ; freqDivider         ; work         ;
+;    |freqDivider:freqDiv|                  ; 14 (14)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Alarm|freqDivider:freqDiv                                                                                                ; freqDivider         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+---------------------------------------+--------------------------------------------+
-; Register name                         ; Reason for Removal                         ;
-+---------------------------------------+--------------------------------------------+
-; debouncer:db3|timer_counter           ; Stuck at GND due to stuck port data_in     ;
-; debouncer:db2|timer_counter           ; Stuck at GND due to stuck port data_in     ;
-; debouncer:db1|timer_counter           ; Stuck at GND due to stuck port data_in     ;
-; debouncer:db0|timer_counter           ; Stuck at GND due to stuck port data_in     ;
-; freqDivider:freqDiv2|s_count[0]       ; Merged with freqDivider:freqDiv|s_count[0] ;
-; freqDivider:freqDiv2|s_count[1]       ; Merged with freqDivider:freqDiv|s_count[1] ;
-; Total Number of Removed Registers = 6 ;                                            ;
-+---------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LEDG[8]$latch                                      ; SW[1]               ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-------------------------------------------------+---------------------------------------------------------+
+; Register name                                   ; Reason for Removal                                      ;
++-------------------------------------------------+---------------------------------------------------------+
+; Clock:clkIn|cur_sel[0..31]                      ; Lost fanout                                             ;
+; Clock:clkIn|press[0..6]                         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db3|level                 ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db3|timer_counter         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db3|sampled_dirty         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db1|level                 ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db1|timer_counter         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db1|sampled_dirty         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db0|level                 ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db0|timer_counter         ; Lost fanout                                             ;
+; Clock:clkIn|debouncer:db0|sampled_dirty         ; Lost fanout                                             ;
+; Clock:clkIn|freqDivider:freqDiv2|s_count[0..30] ; Lost fanout                                             ;
+; Clock:clkIn|freqDivider:freqDiv2|clkOut         ; Lost fanout                                             ;
+; debouncer:db3|timer_counter                     ; Stuck at GND due to stuck port data_in                  ;
+; debouncer:db2|timer_counter                     ; Stuck at GND due to stuck port data_in                  ;
+; debouncer:db1|timer_counter                     ; Stuck at GND due to stuck port data_in                  ;
+; debouncer:db0|timer_counter                     ; Stuck at GND due to stuck port data_in                  ;
+; freqDivider:freqDiv|s_count[30]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[30] ;
+; freqDivider:freqDiv|s_count[29]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[29] ;
+; freqDivider:freqDiv|s_count[28]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[28] ;
+; freqDivider:freqDiv|s_count[27]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[27] ;
+; freqDivider:freqDiv|s_count[26]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[26] ;
+; freqDivider:freqDiv|s_count[25]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[25] ;
+; freqDivider:freqDiv|s_count[23]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[23] ;
+; freqDivider:freqDiv|s_count[17]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[17] ;
+; freqDivider:freqDiv|s_count[15]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[15] ;
+; freqDivider:freqDiv|s_count[10]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[10] ;
+; freqDivider:freqDiv|s_count[9]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[9]  ;
+; freqDivider:freqDiv|s_count[8]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[8]  ;
+; freqDivider:freqDiv|s_count[7]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[7]  ;
+; freqDivider:freqDiv|s_count[6]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[6]  ;
+; freqDivider:freqDiv|s_count[24]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[24] ;
+; freqDivider:freqDiv|s_count[22]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[22] ;
+; freqDivider:freqDiv|s_count[21]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[21] ;
+; freqDivider:freqDiv|s_count[20]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[20] ;
+; freqDivider:freqDiv|s_count[19]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[19] ;
+; freqDivider:freqDiv|s_count[18]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[18] ;
+; freqDivider:freqDiv|s_count[16]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[16] ;
+; freqDivider:freqDiv|s_count[14]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[14] ;
+; freqDivider:freqDiv|s_count[13]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[13] ;
+; freqDivider:freqDiv|s_count[12]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[12] ;
+; freqDivider:freqDiv|s_count[11]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[11] ;
+; freqDivider:freqDiv|s_count[5]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[5]  ;
+; freqDivider:freqDiv|s_count[4]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[4]  ;
+; freqDivider:freqDiv|s_count[3]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[3]  ;
+; freqDivider:freqDiv|s_count[2]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[2]  ;
+; freqDivider:freqDiv|s_count[1]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[1]  ;
+; freqDivider:freqDiv|s_count[0]                  ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[0]  ;
+; freqDivider:freqDiv3|s_count[0]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[0]  ;
+; freqDivider:freqDiv2|s_count[0]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[0]  ;
+; freqDivider:freqDiv3|s_count[1]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[1]  ;
+; freqDivider:freqDiv2|s_count[1]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[1]  ;
+; freqDivider:freqDiv2|s_count[2]                 ; Merged with freqDivider:freqDiv3|s_count[2]             ;
+; freqDivider:freqDiv3|s_count[2]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[2]  ;
+; freqDivider:freqDiv2|s_count[3]                 ; Merged with freqDivider:freqDiv3|s_count[3]             ;
+; freqDivider:freqDiv3|s_count[3]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[3]  ;
+; freqDivider:freqDiv2|s_count[4]                 ; Merged with freqDivider:freqDiv3|s_count[4]             ;
+; freqDivider:freqDiv3|s_count[4]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[4]  ;
+; freqDivider:freqDiv2|s_count[5]                 ; Merged with freqDivider:freqDiv3|s_count[5]             ;
+; freqDivider:freqDiv3|s_count[5]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[5]  ;
+; freqDivider:freqDiv3|s_count[6]                 ; Merged with Clock:clkIn|freqDivider:freqDiv|s_count[6]  ;
+; Total Number of Removed Registers = 128         ;                                                         ;
++-------------------------------------------------+---------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++----------------------------------------------+--------------------+----------------------------------------------------------------------------------+
+; Register name                                ; Reason for Removal ; Registers Removed due to This Register                                           ;
++----------------------------------------------+--------------------+----------------------------------------------------------------------------------+
+; Clock:clkIn|freqDivider:freqDiv2|s_count[28] ; Lost Fanouts       ; Clock:clkIn|freqDivider:freqDiv2|s_count[27],                                    ;
+;                                              ;                    ; Clock:clkIn|freqDivider:freqDiv2|s_count[26],                                    ;
+;                                              ;                    ; Clock:clkIn|freqDivider:freqDiv2|s_count[25],                                    ;
+;                                              ;                    ; Clock:clkIn|freqDivider:freqDiv2|s_count[29],                                    ;
+;                                              ;                    ; Clock:clkIn|freqDivider:freqDiv2|s_count[30]                                     ;
+; Clock:clkIn|debouncer:db3|level              ; Lost Fanouts       ; Clock:clkIn|debouncer:db3|timer_counter, Clock:clkIn|debouncer:db3|sampled_dirty ;
+; Clock:clkIn|debouncer:db1|level              ; Lost Fanouts       ; Clock:clkIn|debouncer:db1|timer_counter, Clock:clkIn|debouncer:db1|sampled_dirty ;
+; Clock:clkIn|debouncer:db0|level              ; Lost Fanouts       ; Clock:clkIn|debouncer:db0|timer_counter, Clock:clkIn|debouncer:db0|sampled_dirty ;
+; Clock:clkIn|cur_sel[0]                       ; Lost Fanouts       ; Clock:clkIn|freqDivider:freqDiv2|clkOut                                          ;
++----------------------------------------------+--------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -295,12 +398,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 127   ;
-; Number of registers using Synchronous Clear  ; 7     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 176   ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 53    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -310,27 +413,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; am                                     ; 7       ;
+; Clock:clkIn|am                         ; 5       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Clock|cur_sel[24]         ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Clock|sec[1]              ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 20 LEs               ; 15 LEs                 ; Yes        ; |Clock|min[5]              ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 12 LEs               ; 14 LEs                 ; Yes        ; |Clock|hour[4]             ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |Clock|HEX2                ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |Clock|HEX4                ;
-; 17:1               ; 5 bits    ; 55 LEs        ; 25 LEs               ; 30 LEs                 ; No         ; |Clock|HEX7                ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |Clock|HEX6                ;
-; 33:1               ; 3 bits    ; 66 LEs        ; 39 LEs               ; 27 LEs                 ; No         ; |Clock|HEX3                ;
-; 33:1               ; 3 bits    ; 66 LEs        ; 39 LEs               ; 27 LEs                 ; No         ; |Clock|HEX5                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Alarm|freqDivider:freqDiv|clkOut ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Alarm|setHour                    ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Alarm|Set:almsetMin|s_count[5]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Alarm|Set:almsetHour|s_count[11] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Alarm|Clock:clkIn|hour[0]        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |Alarm|Clock:clkIn|hour[3]        ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |Alarm|HEX4                       ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 25 LEs               ; 30 LEs                 ; No         ; |Alarm|HEX7                       ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |Alarm|HEX6                       ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 39 LEs               ; 27 LEs                 ; No         ; |Alarm|HEX5                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -349,6 +452,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value    ; Type                                  ;
 +----------------+----------+---------------------------------------+
 ; div_factor     ; 15000000 ; Signed Integer                        ;
++----------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freqDivider:freqDiv3 ;
++----------------+----------+---------------------------------------+
+; Parameter Name ; Value    ; Type                                  ;
++----------------+----------+---------------------------------------+
+; div_factor     ; 10000000 ; Signed Integer                        ;
 +----------------+----------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -401,142 +514,280 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 8              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set:almsetMin ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; max            ; 59    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 4              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set:almsetHour ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; max            ; 23    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod1 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 8              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|freqDivider:freqDiv ;
++----------------+----------+--------------------------------------------------+
+; Parameter Name ; Value    ; Type                                             ;
++----------------+----------+--------------------------------------------------+
+; div_factor     ; 50000000 ; Signed Integer                                   ;
++----------------+----------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div1 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 4              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|freqDivider:freqDiv2 ;
++----------------+----------+---------------------------------------------------+
+; Parameter Name ; Value    ; Type                                              ;
++----------------+----------+---------------------------------------------------+
+; div_factor     ; 15000000 ; Signed Integer                                    ;
++----------------+----------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Mod2 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 8              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db0 ;
++-----------------+------------+-----------------------------------------+
+; Parameter Name  ; Value      ; Type                                    ;
++-----------------+------------+-----------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                            ;
+; window_duration ; 0.0        ; Signed Float                            ;
+; initial_level   ; '0'        ; Enumerated                              ;
++-----------------+------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Bin2BCD:bin2BCD|lpm_divide:Div2 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                ;
-; LPM_WIDTHD             ; 4              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db1 ;
++-----------------+------------+-----------------------------------------+
+; Parameter Name  ; Value      ; Type                                    ;
++-----------------+------------+-----------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                            ;
+; window_duration ; 0.0        ; Signed Float                            ;
+; initial_level   ; '0'        ; Enumerated                              ;
++-----------------+------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db2 ;
++-----------------+------------+-----------------------------------------+
+; Parameter Name  ; Value      ; Type                                    ;
++-----------------+------------+-----------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                            ;
+; window_duration ; 0.0        ; Signed Float                            ;
+; initial_level   ; '0'        ; Enumerated                              ;
++-----------------+------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock:clkIn|debouncer:db3 ;
++-----------------+------------+-----------------------------------------+
+; Parameter Name  ; Value      ; Type                                    ;
++-----------------+------------+-----------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                            ;
+; window_duration ; 0.0        ; Signed Float                            ;
+; initial_level   ; '0'        ; Enumerated                              ;
++-----------------+------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                   ;
+; LPM_WIDTHD             ; 8              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                   ;
+; LPM_WIDTHD             ; 4              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                   ;
+; LPM_WIDTHD             ; 8              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Bin2BCD1:a_bin2BCD|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                   ;
+; LPM_WIDTHD             ; 4              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn|debouncer:db3"                                                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn|debouncer:db2"                                                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn|debouncer:db1"                                                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn|debouncer:db0"                                                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn|Bin2BCD:bin2BCD"                                                                ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; binin[7..6]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; binin1[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; binin2[7..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bcdms[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdms1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdms2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bcdls2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Clock:clkIn"                                                                                  ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; sw[1..0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; hex0           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex1           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex2           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex3           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex4           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex5           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex6           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hex7           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ledg           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; secout         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; minout[31..6]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hourout[31..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Set:almsetHour"                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; count[31..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Set:almsetMin"                                                                              ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; count[31..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -580,19 +831,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Bin2BCD:bin2BCD"                                                                            ;
+; Port Connectivity Checks: "Bin2BCD1:a_bin2BCD"                                                                         ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; binin[7..6]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; binin1[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; binin2[7..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; binin1[7..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; bcdms[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; bcdls[7..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; bcdms1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; bcdls1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bcdms2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bcdls2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -601,26 +849,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 72                          ;
-; cycloneiii_ff         ; 127                         ;
-;     ENA               ; 42                          ;
-;     SCLR              ; 7                           ;
-;     SLD               ; 1                           ;
-;     plain             ; 77                          ;
-; cycloneiii_lcell_comb ; 654                         ;
-;     arith             ; 181                         ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 147                         ;
-;         3 data inputs ; 27                          ;
-;     normal            ; 473                         ;
-;         0 data inputs ; 10                          ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 73                          ;
-;         3 data inputs ; 77                          ;
-;         4 data inputs ; 295                         ;
+; boundary_port         ; 67                          ;
+; cycloneiii_ff         ; 176                         ;
+;     ENA               ; 9                           ;
+;     ENA SCLR          ; 6                           ;
+;     SCLR              ; 6                           ;
+;     SLD               ; 53                          ;
+;     plain             ; 102                         ;
+; cycloneiii_lcell_comb ; 651                         ;
+;     arith             ; 257                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 235                         ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 394                         ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 113                         ;
+;         4 data inputs ; 197                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.80                       ;
-; Average LUT depth     ; 6.02                        ;
+; Average LUT depth     ; 4.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -639,7 +888,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon May 29 19:52:54 2017
+    Info: Processing started: Fri Jun 02 18:03:44 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off baseClock -c baseClock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -653,43 +902,88 @@ Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd
     Info (12022): Found design unit 1: Bin2BCD-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 17
     Info (12023): Found entity 1: Bin2BCD File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: Clock-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 36
+    Info (12022): Found design unit 1: Clock-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 41
     Info (12023): Found entity 1: Clock File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
     Info (12022): Found design unit 1: debouncer-v1 File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/debouncer.vhd Line: 32
     Info (12023): Found entity 1: debouncer File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/debouncer.vhd Line: 14
-Info (12127): Elaborating entity "Clock" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at Clock.vhd(469): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 469
-Warning (10492): VHDL Process Statement warning at Clock.vhd(469): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 469
-Warning (10492): VHDL Process Statement warning at Clock.vhd(473): signal "h2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 473
-Warning (10492): VHDL Process Statement warning at Clock.vhd(474): signal "h2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 474
-Warning (10492): VHDL Process Statement warning at Clock.vhd(478): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 478
-Warning (10492): VHDL Process Statement warning at Clock.vhd(478): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 478
-Warning (10492): VHDL Process Statement warning at Clock.vhd(482): signal "m2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 482
-Warning (10492): VHDL Process Statement warning at Clock.vhd(483): signal "m2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 483
-Warning (10492): VHDL Process Statement warning at Clock.vhd(487): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 487
-Warning (10492): VHDL Process Statement warning at Clock.vhd(487): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 487
-Warning (10492): VHDL Process Statement warning at Clock.vhd(491): signal "s2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 491
-Warning (10492): VHDL Process Statement warning at Clock.vhd(492): signal "s2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 492
-Warning (10492): VHDL Process Statement warning at Clock.vhd(496): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 496
-Warning (10492): VHDL Process Statement warning at Clock.vhd(498): signal "am" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 498
+Info (12021): Found 2 design units, including 1 entities, in source file chronometer.vhd
+    Info (12022): Found design unit 1: Chronometer-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Chronometer.vhd Line: 30
+    Info (12023): Found entity 1: Chronometer File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Chronometer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd1.vhd
+    Info (12022): Found design unit 1: Bin2BCD1-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 14
+    Info (12023): Found entity 1: Bin2BCD1 File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alarm.vhd
+    Info (12022): Found design unit 1: Alarm-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 36
+    Info (12023): Found entity 1: Alarm File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file set.vhd
+    Info (12022): Found design unit 1: Set-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Set.vhd Line: 13
+    Info (12023): Found entity 1: Set File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Set.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file chronometerdown.vhd
+    Info (12022): Found design unit 1: ChronometerDown-Behavioral File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/ChronometerDown.vhd Line: 32
+    Info (12023): Found entity 1: ChronometerDown File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/ChronometerDown.vhd Line: 5
+Info (12127): Elaborating entity "Alarm" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Alarm.vhd(39): object "sec" assigned a value but never read File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 39
+Critical Warning (10920): VHDL Incomplete Partial Association warning at Alarm.vhd(145): port or argument "SW" has 2/4 unassociated elements File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(156): signal "a_min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(156): signal "a_hour" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(194): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(196): signal "al_bip" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 196
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(204): signal "a_h2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 204
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(205): signal "a_h2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 205
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(206): signal "a_m2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 206
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(207): signal "a_m2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(216): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(216): signal "setHour" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(220): signal "a_h2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 220
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(221): signal "a_h2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 221
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(225): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 225
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(225): signal "setMin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 225
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(229): signal "a_m2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 229
+Warning (10492): VHDL Process Statement warning at Alarm.vhd(230): signal "a_m2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 230
+Warning (10631): VHDL Process Statement warning at Alarm.vhd(189): inferring latch(es) for signal or variable "LEDG", which holds its previous value in one or more paths through the process File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 189
+Warning (10873): Using initial value X (don't care) for net "LEDG[7]" at Alarm.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "LEDG[5]" at Alarm.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "LEDG[3]" at Alarm.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "LEDG[1]" at Alarm.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+Info (10041): Inferred latch for "LEDG[8]" at Alarm.vhd(189) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 189
+Info (12129): Elaborating entity "Bin2BCD1" using architecture "A:behavioral" for hierarchy "Bin2BCD1:a_bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 51
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:a_b7segH1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 59
+Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 78
+Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 83
+Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv3" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 88
+Info (12129): Elaborating entity "debouncer" using architecture "A:v1" for hierarchy "debouncer:db0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 96
+Info (12129): Elaborating entity "Set" using architecture "A:behavioral" for hierarchy "Set:almsetMin" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at Set.vhd(21): signal "s_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Set.vhd Line: 21
+Info (12129): Elaborating entity "Set" using architecture "A:behavioral" for hierarchy "Set:almsetHour" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at Set.vhd(21): signal "s_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Set.vhd Line: 21
+Info (12129): Elaborating entity "Clock" using architecture "A:behavioral" for hierarchy "Clock:clkIn" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at Clock.vhd(509): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 509
+Warning (10492): VHDL Process Statement warning at Clock.vhd(509): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 509
+Warning (10492): VHDL Process Statement warning at Clock.vhd(513): signal "h2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 513
+Warning (10492): VHDL Process Statement warning at Clock.vhd(514): signal "h2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 514
+Warning (10492): VHDL Process Statement warning at Clock.vhd(518): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 518
+Warning (10492): VHDL Process Statement warning at Clock.vhd(518): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 518
+Warning (10492): VHDL Process Statement warning at Clock.vhd(522): signal "m2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 522
+Warning (10492): VHDL Process Statement warning at Clock.vhd(523): signal "m2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 523
+Warning (10492): VHDL Process Statement warning at Clock.vhd(527): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 527
+Warning (10492): VHDL Process Statement warning at Clock.vhd(527): signal "cur_sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 527
+Warning (10492): VHDL Process Statement warning at Clock.vhd(531): signal "s2Dis1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 531
+Warning (10492): VHDL Process Statement warning at Clock.vhd(532): signal "s2Dis" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 532
+Warning (10492): VHDL Process Statement warning at Clock.vhd(536): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 536
+Warning (10492): VHDL Process Statement warning at Clock.vhd(538): signal "am" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 538
+Warning (10873): Using initial value X (don't care) for net "LEDG[7]" at Clock.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
 Warning (10873): Using initial value X (don't care) for net "LEDG[5]" at Clock.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
 Warning (10873): Using initial value X (don't care) for net "LEDG[3]" at Clock.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
 Warning (10873): Using initial value X (don't care) for net "LEDG[1]" at Clock.vhd(33) File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
-Info (12129): Elaborating entity "Bin2BCD" using architecture "A:behavioral" for hierarchy "Bin2BCD:bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 49
-Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:b7segH" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 60
-Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 85
-Info (12129): Elaborating entity "freqDivider" using architecture "A:behavioral" for hierarchy "freqDivider:freqDiv2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 90
-Info (12129): Elaborating entity "debouncer" using architecture "A:v1" for hierarchy "debouncer:db0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 95
-Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 20
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 21
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:bin2BCD|Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 20
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Mod0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 20
+Info (12129): Elaborating entity "Bin2BCD" using architecture "A:behavioral" for hierarchy "Clock:clkIn|Bin2BCD:bin2BCD" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 54
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD1:a_bin2BCD|Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD1:a_bin2BCD|Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD1:a_bin2BCD|Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD1:a_bin2BCD|Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 18
+Info (12130): Elaborated megafunction instantiation "Bin2BCD1:a_bin2BCD|lpm_divide:Mod0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 17
+Info (12133): Instantiated megafunction "Bin2BCD1:a_bin2BCD|lpm_divide:Mod0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 17
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -704,8 +998,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 19
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Div0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 19
+Info (12130): Elaborated megafunction instantiation "Bin2BCD1:a_bin2BCD|lpm_divide:Div0" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 16
+Info (12133): Instantiated megafunction "Bin2BCD1:a_bin2BCD|lpm_divide:Div0" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 16
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -716,41 +1010,46 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
     Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/db/alt_u_div_a4f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Mod2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Mod2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 24
+Info (12130): Elaborated megafunction instantiation "Bin2BCD1:a_bin2BCD|lpm_divide:Mod1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 19
+Info (12133): Instantiated megafunction "Bin2BCD1:a_bin2BCD|lpm_divide:Mod1" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:bin2BCD|lpm_divide:Div2" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
-Info (12133): Instantiated megafunction "Bin2BCD:bin2BCD|lpm_divide:Div2" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD.vhd Line: 23
+Info (12130): Elaborated megafunction instantiation "Bin2BCD1:a_bin2BCD|lpm_divide:Div1" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 18
+Info (12133): Instantiated megafunction "Bin2BCD1:a_bin2BCD|lpm_divide:Div1" with the following parameter: File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Bin2BCD1.vhd Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 23
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 23
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 23
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 23
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 24
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 33
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 23
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 23
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 23
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 23
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 24
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 24
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 24
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 25
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 80 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Clock.vhd Line: 17
-Info (21057): Implemented 726 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 17
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase2/Alarm.vhd Line: 17
+Info (21057): Implemented 720 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 63 output pins
-    Info (21061): Implemented 654 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 697 megabytes
-    Info: Processing ended: Mon May 29 19:53:07 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 653 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 696 megabytes
+    Info: Processing ended: Fri Jun 02 18:03:58 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

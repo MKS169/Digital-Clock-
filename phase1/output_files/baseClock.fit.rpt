@@ -1,5 +1,5 @@
 Fitter report for baseClock
-Wed May 17 18:53:55 2017
+Fri Jun 02 12:29:10 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -69,17 +69,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 17 18:53:55 2017       ;
+; Fitter Status                      ; Successful - Fri Jun 02 12:29:10 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; baseClock                                   ;
 ; Top-level Entity Name              ; Clock                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 772 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 771 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 104 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 104                                         ;
+; Total logic elements               ; 841 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 840 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 128 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 128                                         ;
 ; Total pins                         ; 53 / 529 ( 10 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -156,13 +156,13 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processors 3-4         ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processors 3-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -646,19 +646,19 @@ agreement for further details.
 +----------+----------------+--------------+------------------+---------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 994 ) ; 0.00 % ( 0 / 994 )         ; 0.00 % ( 0 / 994 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 994 ) ; 0.00 % ( 0 / 994 )         ; 0.00 % ( 0 / 994 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 1087 ) ; 0.00 % ( 0 / 1087 )        ; 0.00 % ( 0 / 1087 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1087 ) ; 0.00 % ( 0 / 1087 )        ; 0.00 % ( 0 / 1087 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -676,7 +676,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 984 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1077 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -692,26 +692,26 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 772 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 668                     ;
+; Total logic elements                        ; 841 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 713                     ;
 ;     -- Register only                        ; 1                       ;
-;     -- Combinational with a register        ; 103                     ;
+;     -- Combinational with a register        ; 127                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 288                     ;
-;     -- 3 input functions                    ; 143                     ;
-;     -- <=2 input functions                  ; 340                     ;
+;     -- 4 input functions                    ; 328                     ;
+;     -- 3 input functions                    ; 145                     ;
+;     -- <=2 input functions                  ; 367                     ;
 ;     -- Register only                        ; 1                       ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 541                     ;
-;     -- arithmetic mode                      ; 230                     ;
+;     -- normal mode                          ; 585                     ;
+;     -- arithmetic mode                      ; 255                     ;
 ;                                             ;                         ;
-; Total registers*                            ; 104 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 104 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 128 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 128 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 58 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 68 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 53 / 529 ( 10 % )       ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -730,11 +730,11 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%      ;
-; Peak interconnect usage (total/H/V)         ; 1.4% / 1.5% / 1.7%      ;
-; Maximum fan-out                             ; 72                      ;
-; Highest non-global fan-out                  ; 40                      ;
-; Total fan-out                               ; 2515                    ;
-; Average fan-out                             ; 2.53                    ;
+; Peak interconnect usage (total/H/V)         ; 2.3% / 1.8% / 3.1%      ;
+; Maximum fan-out                             ; 96                      ;
+; Highest non-global fan-out                  ; 64                      ;
+; Total fan-out                               ; 2776                    ;
+; Average fan-out                             ; 2.55                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -747,26 +747,26 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 772 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 668                    ; 0                              ;
+; Total logic elements                        ; 841 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 713                    ; 0                              ;
 ;     -- Register only                        ; 1                      ; 0                              ;
-;     -- Combinational with a register        ; 103                    ; 0                              ;
+;     -- Combinational with a register        ; 127                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 288                    ; 0                              ;
-;     -- 3 input functions                    ; 143                    ; 0                              ;
-;     -- <=2 input functions                  ; 340                    ; 0                              ;
+;     -- 4 input functions                    ; 328                    ; 0                              ;
+;     -- 3 input functions                    ; 145                    ; 0                              ;
+;     -- <=2 input functions                  ; 367                    ; 0                              ;
 ;     -- Register only                        ; 1                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 541                    ; 0                              ;
-;     -- arithmetic mode                      ; 230                    ; 0                              ;
+;     -- normal mode                          ; 585                    ; 0                              ;
+;     -- arithmetic mode                      ; 255                    ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 104                    ; 0                              ;
-;     -- Dedicated logic registers            ; 104 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 128                    ; 0                              ;
+;     -- Dedicated logic registers            ; 128 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 58 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 68 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 53                     ; 0                              ;
@@ -782,8 +782,8 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 2510                   ; 5                              ;
-;     -- Registered Connections               ; 772                    ; 0                              ;
+;     -- Total Connections                    ; 2771                   ; 5                              ;
+;     -- Registered Connections               ; 855                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -851,7 +851,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; HEX4[4] ; AE19  ; 4        ; 83           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX4[5] ; AF19  ; 4        ; 83           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX4[6] ; AE18  ; 4        ; 79           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; HEX4[7] ; L27   ; 6        ; 115          ; 48           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HEX4[7] ; L24   ; 6        ; 115          ; 48           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; HEX5[0] ; AD18  ; 4        ; 85           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX5[1] ; AC18  ; 4        ; 87           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX5[2] ; AB18  ; 4        ; 98           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -859,7 +859,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; HEX5[4] ; AG19  ; 4        ; 72           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX5[5] ; AF18  ; 4        ; 79           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX5[6] ; AH18  ; 4        ; 69           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; HEX5[7] ; C11   ; 8        ; 23           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HEX5[7] ; AE24  ; 4        ; 100          ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; HEX6[0] ; AA17  ; 4        ; 89           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX6[1] ; AB16  ; 4        ; 65           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX6[2] ; AA16  ; 4        ; 65           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -867,7 +867,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; HEX6[4] ; AB15  ; 4        ; 67           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX6[5] ; AA15  ; 4        ; 67           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX6[6] ; AC17  ; 4        ; 74           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; HEX6[7] ; P1    ; 1        ; 0            ; 42           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HEX6[7] ; AG7   ; 3        ; 16           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; HEX7[0] ; AD17  ; 4        ; 74           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX7[1] ; AE17  ; 4        ; 67           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX7[2] ; AG17  ; 4        ; 62           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
@@ -875,7 +875,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; HEX7[4] ; AF17  ; 4        ; 67           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX7[5] ; AG18  ; 4        ; 69           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX7[6] ; AA14  ; 3        ; 54           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; HEX7[7] ; R6    ; 2        ; 0            ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HEX7[7] ; P25   ; 6        ; 115          ; 41           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -896,8 +896,8 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; P23      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; M22      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P22      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; P25      ; DIFFIO_R24p, CRC_ERROR      ; Use as regular IO        ; HEX7[7]                 ; Dual Purpose Pin          ;
 ; P28      ; DIFFIO_R23n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; C11      ; DIFFIO_T15n, DATA7          ; Use as regular IO        ; HEX5[7]                 ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -906,14 +906,14 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 5 / 56 ( 9 % )   ; 2.5V          ; --           ;
-; 2        ; 2 / 63 ( 3 % )   ; 2.5V          ; --           ;
-; 3        ; 2 / 73 ( 3 % )   ; 2.5V          ; --           ;
-; 4        ; 32 / 71 ( 45 % ) ; 2.5V          ; --           ;
+; 1        ; 4 / 56 ( 7 % )   ; 2.5V          ; --           ;
+; 2        ; 1 / 63 ( 2 % )   ; 2.5V          ; --           ;
+; 3        ; 3 / 73 ( 4 % )   ; 2.5V          ; --           ;
+; 4        ; 33 / 71 ( 46 % ) ; 2.5V          ; --           ;
 ; 5        ; 10 / 65 ( 15 % ) ; 2.5V          ; --           ;
-; 6        ; 5 / 58 ( 9 % )   ; 2.5V          ; --           ;
+; 6        ; 6 / 58 ( 10 % )  ; 2.5V          ; --           ;
 ; 7        ; 0 / 72 ( 0 % )   ; 2.5V          ; --           ;
-; 8        ; 2 / 71 ( 3 % )   ; 2.5V          ; --           ;
+; 8        ; 1 / 71 ( 1 % )   ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -1083,7 +1083,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; AE21     ; 238        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE24     ; 256        ; 4        ; HEX5[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE25     ; 243        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE26     ; 278        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE27     ; 284        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1122,7 +1122,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; AG4      ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG5      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG6      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AG7      ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG7      ; 150        ; 3        ; HEX6[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG8      ; 156        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG10     ; 167        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1208,7 +1208,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; C8       ; 519        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ; 510        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C10      ; 495        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C11      ; 508        ; 8        ; HEX5[7]                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 508        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C12      ; 478        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C13      ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1445,10 +1445,10 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; L21      ; 385        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L22      ; 384        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L23      ; 360        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L24      ; 359        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L24      ; 359        ; 6        ; HEX4[7]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L25      ; 369        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L26      ; 363        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L27      ; 358        ; 6        ; HEX4[7]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L27      ; 358        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L28      ; 357        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M1       ; 51         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M2       ; 50         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1506,7 +1506,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; N26      ; 351        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; P1       ; 53         ; 1        ; HEX6[7]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P1       ; 53         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 52         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P3       ; 55         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; P4       ; 57         ; 1        ; ^nCONFIG                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1530,7 +1530,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; P22      ; 343        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P23      ; 341        ; 6        ; ^MSEL1                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P24      ; 339        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; P25      ; 346        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P25      ; 346        ; 6        ; HEX7[7]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P26      ; 345        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P27      ; 350        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P28      ; 349        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -1539,7 +1539,7 @@ The pin-out file can be found in C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/Pr
 ; R3       ; 73         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R4       ; 74         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R5       ; 77         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; R6       ; 70         ; 2        ; HEX7[7]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R6       ; 70         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R7       ; 69         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R8       ; 62         ; 1        ; ^nCE                                                      ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; R9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1778,7 +1778,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Clock                                    ; 772 (131)   ; 104 (72)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 53   ; 0            ; 668 (59)     ; 1 (0)             ; 103 (72)         ; |Clock                                                                                                                 ; Clock               ; work         ;
+; |Clock                                    ; 841 (199)   ; 128 (96)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 53   ; 0            ; 713 (103)    ; 1 (0)             ; 127 (96)         ; |Clock                                                                                                                 ; Clock               ; work         ;
 ;    |Bin2BCD:bin2BCD|                      ; 399 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 399 (0)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD                                                                                                 ; Bin2BCD             ; work         ;
 ;       |lpm_divide:Div0|                   ; 56 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_jhm:auto_generated|  ; 56 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
@@ -1804,7 +1804,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |lpm_divide_q9m:auto_generated|  ; 77 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (0)       ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m      ; work         ;
 ;             |sign_div_unsign_fkh:divider| ; 77 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (0)       ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh ; work         ;
 ;                |alt_u_div_i4f:divider|    ; 77 (77)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (77)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin2BCD:bin2BCD|lpm_divide:Mod2|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f       ; work         ;
-;    |Bin7SegDecoder:b7segH1|               ; 54 (54)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin7SegDecoder:b7segH1                                                                                          ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:b7segH1|               ; 55 (55)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 55 (55)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin7SegDecoder:b7segH1                                                                                          ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segH2|               ; 54 (54)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin7SegDecoder:b7segH2                                                                                          ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segH|                ; 55 (55)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 55 (55)      ; 0 (0)             ; 0 (0)            ; |Clock|Bin7SegDecoder:b7segH                                                                                           ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:b7segL1|               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Clock|Bin7SegDecoder:b7segL1                                                                                          ; Bin7SegDecoder      ; work         ;
@@ -1889,25 +1889,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                       ;
-+----------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                       ; Location         ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                   ; PIN_Y2           ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; Equal1~10                  ; LCCOMB_X83_Y5_N0 ; 40      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; freqDivider:freqDiv|clkOut ; FF_X65_Y71_N9    ; 72      ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-+----------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                              ;
++----------------------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name                       ; Location       ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                   ; PIN_Y2         ; 32      ; Clock ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; freqDivider:freqDiv|clkOut ; FF_X114_Y38_N5 ; 96      ; Clock ; yes    ; Global Clock         ; GCLK6            ; --                        ;
++----------------------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                       ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                       ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50                   ; PIN_Y2        ; 32      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; freqDivider:freqDiv|clkOut ; FF_X65_Y71_N9 ; 72      ; 20                                   ; Global Clock         ; GCLK11           ; --                        ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                        ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                       ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK_50                   ; PIN_Y2         ; 32      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; freqDivider:freqDiv|clkOut ; FF_X114_Y38_N5 ; 96      ; 8                                    ; Global Clock         ; GCLK6            ; --                        ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -1915,83 +1914,83 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 672 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 8 / 10,120 ( < 1 % )    ;
-; C4 interconnects      ; 238 / 209,544 ( < 1 % ) ;
-; Direct links          ; 281 / 342,891 ( < 1 % ) ;
+; Block interconnects   ; 784 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 18 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 264 / 209,544 ( < 1 % ) ;
+; Direct links          ; 343 / 342,891 ( < 1 % ) ;
 ; Global clocks         ; 2 / 20 ( 10 % )         ;
-; Local interconnects   ; 408 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 20 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 233 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 425 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 17 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 243 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.31) ; Number of LABs  (Total = 58) ;
+; Number of Logic Elements  (Average = 12.37) ; Number of LABs  (Total = 68) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 3                            ;
 ; 3                                           ; 2                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 5                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 6                            ;
 ; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 3                            ;
-; 13                                          ; 4                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 2                            ;
-; 15                                          ; 3                            ;
-; 16                                          ; 34                           ;
+; 15                                          ; 4                            ;
+; 16                                          ; 39                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.19) ; Number of LABs  (Total = 58) ;
+; LAB-wide Signals  (Average = 0.24) ; Number of LABs  (Total = 68) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 11                           ;
+; 1 Clock                            ; 16                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.53) ; Number of LABs  (Total = 58) ;
+; Number of Signals Sourced  (Average = 13.76) ; Number of LABs  (Total = 68) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 2                            ;
+; 1                                            ; 3                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 3                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 5                            ;
-; 8                                            ; 2                            ;
+; 7                                            ; 4                            ;
+; 8                                            ; 3                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 2                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 5                            ;
 ; 12                                           ; 4                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 9                            ;
-; 16                                           ; 19                           ;
-; 17                                           ; 2                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 4                            ;
+; 15                                           ; 6                            ;
+; 16                                           ; 21                           ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
+; 27                                           ; 2                            ;
 ; 28                                           ; 4                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
@@ -2003,61 +2002,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.03) ; Number of LABs  (Total = 58) ;
+; Number of Signals Sourced Out  (Average = 7.82) ; Number of LABs  (Total = 68) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 7                            ;
-; 4                                               ; 5                            ;
-; 5                                               ; 1                            ;
+; 1                                               ; 4                            ;
+; 2                                               ; 6                            ;
+; 3                                               ; 4                            ;
+; 4                                               ; 4                            ;
+; 5                                               ; 6                            ;
 ; 6                                               ; 6                            ;
-; 7                                               ; 7                            ;
-; 8                                               ; 6                            ;
+; 7                                               ; 6                            ;
+; 8                                               ; 7                            ;
 ; 9                                               ; 3                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 2                            ;
-; 12                                              ; 3                            ;
+; 10                                              ; 4                            ;
+; 11                                              ; 4                            ;
+; 12                                              ; 0                            ;
 ; 13                                              ; 2                            ;
 ; 14                                              ; 1                            ;
 ; 15                                              ; 3                            ;
-; 16                                              ; 5                            ;
+; 16                                              ; 8                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.14) ; Number of LABs  (Total = 58) ;
+; Number of Distinct Inputs  (Average = 10.35) ; Number of LABs  (Total = 68) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 1                            ;
+; 2                                            ; 4                            ;
+; 3                                            ; 2                            ;
 ; 4                                            ; 7                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 6                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 6                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 5                            ;
 ; 9                                            ; 4                            ;
-; 10                                           ; 7                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 3                            ;
-; 13                                           ; 2                            ;
+; 10                                           ; 5                            ;
+; 11                                           ; 7                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 7                            ;
 ; 14                                           ; 4                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 3                            ;
+; 15                                           ; 6                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 2                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 22                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2230,38 +2224,38 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------+----------------------------+-------------------+
 ; Source Register                 ; Destination Register       ; Delay Added in ns ;
 +---------------------------------+----------------------------+-------------------+
-; freqDivider:freqDiv|clkOut      ; freqDivider:freqDiv|clkOut ; 4.187             ;
-; freqDivider:freqDiv|s_count[30] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[29] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[28] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[27] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[25] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[24] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[23] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[22] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[21] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[20] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[26] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[18] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[17] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[16] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[19] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[14] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[13] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[12] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[10] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[9]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[8]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[7]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[11] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[15] ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[5]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[4]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[3]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[2]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[1]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[0]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
-; freqDivider:freqDiv|s_count[6]  ; freqDivider:freqDiv|clkOut ; 1.655             ;
+; freqDivider:freqDiv|clkOut      ; freqDivider:freqDiv|clkOut ; 4.177             ;
+; freqDivider:freqDiv|s_count[30] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[29] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[28] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[27] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[25] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[24] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[23] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[22] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[21] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[20] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[26] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[18] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[17] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[16] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[19] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[14] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[13] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[12] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[10] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[9]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[8]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[7]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[11] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[15] ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[5]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[4]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[3]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[2]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[1]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[0]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
+; freqDivider:freqDiv|s_count[6]  ; freqDivider:freqDiv|clkOut ; 1.668             ;
 +---------------------------------+----------------------------+-------------------+
 Note: This table only shows the top 32 path(s) that have the largest delay added for hold.
 
@@ -2794,20 +2788,20 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X92_Y0 to location X103_Y11
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X69_Y0 to location X80_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.38 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.37 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2816,10 +2810,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/masil/Desktop/UA/1ano/2semestre/LSD/ProjetoFinal/Final/phase1/output_files/baseClock.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 479 warnings
-    Info: Peak virtual memory: 1578 megabytes
-    Info: Processing ended: Wed May 17 18:53:55 2017
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 1587 megabytes
+    Info: Processing ended: Fri Jun 02 12:29:11 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+

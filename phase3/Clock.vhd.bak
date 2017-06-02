@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Clock is
+	port(clk   : in std_logic;
+		  sin   : in std_logic;
+		  sout  : in std_logic;
+		  openC : in std_logic;
+		  count : out std_logic_vector(7 downto 0));
+end Clock;
+
+architecture Behavioral of Clock is
+
+signal s_count : integer := 0;
+
+begin
+	
+end Behavioral;

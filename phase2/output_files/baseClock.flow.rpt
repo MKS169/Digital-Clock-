@@ -1,5 +1,5 @@
 Flow report for baseClock
-Mon May 29 19:53:34 2017
+Fri Jun 02 18:04:26 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 29 19:53:34 2017       ;
+; Flow Status                        ; Successful - Fri Jun 02 18:04:26 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; baseClock                                   ;
-; Top-level Entity Name              ; Clock                                       ;
+; Top-level Entity Name              ; Alarm                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 650 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 646 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 127 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 127                                         ;
-; Total pins                         ; 72 / 529 ( 14 % )                           ;
+; Total logic elements               ; 661 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 647 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 176 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 176                                         ;
+; Total pins                         ; 67 / 529 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/29/2017 19:52:55 ;
+; Start date & time ; 06/02/2017 18:03:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; baseClock           ;
 +-------------------+---------------------+
@@ -76,18 +76,18 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 242211441442147.149608397501464        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 242211441442147.149642302503032        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Clock       ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Clock       ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Clock       ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Alarm       ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Alarm       ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Alarm       ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; Clock                                  ; baseClock     ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; Alarm                                  ; baseClock     ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -96,12 +96,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 697 MB              ; 00:00:26                           ;
-; Fitter                    ; 00:00:16     ; 1.0                     ; 1595 MB             ; 00:00:25                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 573 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 734 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 548 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:57                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 696 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:17     ; 1.0                     ; 1597 MB             ; 00:00:27                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 576 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 735 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 546 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:38     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

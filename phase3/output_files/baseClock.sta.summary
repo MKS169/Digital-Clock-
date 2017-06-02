@@ -1,0 +1,605 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'enable[0]'
+Slack : -15.443
+TNS   : -1380.234
+
+Type  : Slow 1200mV 85C Model Setup 'enable[1]'
+Slack : -14.378
+TNS   : -1308.629
+
+Type  : Slow 1200mV 85C Model Setup 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -5.676
+TNS   : -99.134
+
+Type  : Slow 1200mV 85C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -4.859
+TNS   : -82.316
+
+Type  : Slow 1200mV 85C Model Setup 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : -4.693
+TNS   : -227.223
+
+Type  : Slow 1200mV 85C Model Setup 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -4.682
+TNS   : -266.773
+
+Type  : Slow 1200mV 85C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -4.677
+TNS   : -389.519
+
+Type  : Slow 1200mV 85C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -4.278
+TNS   : -198.954
+
+Type  : Slow 1200mV 85C Model Setup 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -3.930
+TNS   : -103.431
+
+Type  : Slow 1200mV 85C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -3.092
+TNS   : -42.337
+
+Type  : Slow 1200mV 85C Model Setup 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -2.821
+TNS   : -34.128
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.751
+TNS   : -25.717
+
+Type  : Slow 1200mV 85C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -1.817
+TNS   : -5.451
+
+Type  : Slow 1200mV 85C Model Setup 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -1.578
+TNS   : -3.156
+
+Type  : Slow 1200mV 85C Model Setup 'freqDivider:freqDiv|clkOut'
+Slack : -1.533
+TNS   : -2.985
+
+Type  : Slow 1200mV 85C Model Setup 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'enable[1]'
+Slack : -0.814
+TNS   : -25.714
+
+Type  : Slow 1200mV 85C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -0.328
+TNS   : -4.113
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.266
+TNS   : -0.266
+
+Type  : Slow 1200mV 85C Model Hold 'enable[0]'
+Slack : -0.201
+TNS   : -0.708
+
+Type  : Slow 1200mV 85C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -0.171
+TNS   : -0.841
+
+Type  : Slow 1200mV 85C Model Hold 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : 0.680
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'freqDivider:freqDiv|clkOut'
+Slack : 0.929
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.451
+TNS   : -2.902
+
+Type  : Slow 1200mV 85C Model Removal 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 1.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -1.285
+TNS   : -123.360
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -89.950
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.285
+TNS   : -84.810
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -32.125
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -23.130
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -17.990
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Chronometer:chronometer|debouncer:db0|level'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enable[0]'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enable[1]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 4.606
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.749
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'enable[0]'
+Slack : -14.189
+TNS   : -1263.518
+
+Type  : Slow 1200mV 0C Model Setup 'enable[1]'
+Slack : -13.147
+TNS   : -1196.757
+
+Type  : Slow 1200mV 0C Model Setup 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -5.127
+TNS   : -88.907
+
+Type  : Slow 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -4.444
+TNS   : -75.008
+
+Type  : Slow 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -4.194
+TNS   : -347.050
+
+Type  : Slow 1200mV 0C Model Setup 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : -4.139
+TNS   : -195.502
+
+Type  : Slow 1200mV 0C Model Setup 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -4.119
+TNS   : -239.440
+
+Type  : Slow 1200mV 0C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -3.842
+TNS   : -175.333
+
+Type  : Slow 1200mV 0C Model Setup 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -3.434
+TNS   : -91.584
+
+Type  : Slow 1200mV 0C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -2.740
+TNS   : -37.754
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.561
+TNS   : -22.400
+
+Type  : Slow 1200mV 0C Model Setup 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -2.454
+TNS   : -29.625
+
+Type  : Slow 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -1.652
+TNS   : -4.956
+
+Type  : Slow 1200mV 0C Model Setup 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -1.405
+TNS   : -2.810
+
+Type  : Slow 1200mV 0C Model Setup 'freqDivider:freqDiv|clkOut'
+Slack : -1.339
+TNS   : -2.590
+
+Type  : Slow 1200mV 0C Model Setup 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'enable[1]'
+Slack : -0.725
+TNS   : -17.523
+
+Type  : Slow 1200mV 0C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -0.310
+TNS   : -3.756
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.249
+TNS   : -0.249
+
+Type  : Slow 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -0.196
+TNS   : -1.630
+
+Type  : Slow 1200mV 0C Model Hold 'enable[0]'
+Slack : -0.081
+TNS   : -0.324
+
+Type  : Slow 1200mV 0C Model Hold 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : 0.620
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'freqDivider:freqDiv|clkOut'
+Slack : 0.922
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.245
+TNS   : -2.490
+
+Type  : Slow 1200mV 0C Model Removal 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 1.336
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -1.285
+TNS   : -123.360
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -89.950
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.285
+TNS   : -84.810
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -32.125
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -23.130
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -17.990
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freqDivider:freqDiv|clkOut'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|debouncer:db0|level'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enable[0]'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enable[1]'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 4.642
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.774
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'enable[0]'
+Slack : -7.003
+TNS   : -580.213
+
+Type  : Fast 1200mV 0C Model Setup 'enable[1]'
+Slack : -6.245
+TNS   : -541.508
+
+Type  : Fast 1200mV 0C Model Setup 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -2.334
+TNS   : -35.700
+
+Type  : Fast 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -2.088
+TNS   : -32.540
+
+Type  : Fast 1200mV 0C Model Setup 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : -1.974
+TNS   : -88.065
+
+Type  : Fast 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -1.887
+TNS   : -142.917
+
+Type  : Fast 1200mV 0C Model Setup 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.867
+TNS   : -99.302
+
+Type  : Fast 1200mV 0C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -1.630
+TNS   : -70.341
+
+Type  : Fast 1200mV 0C Model Setup 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -1.474
+TNS   : -35.363
+
+Type  : Fast 1200mV 0C Model Setup 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -1.210
+TNS   : -16.702
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.019
+TNS   : -10.656
+
+Type  : Fast 1200mV 0C Model Setup 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -0.876
+TNS   : -6.989
+
+Type  : Fast 1200mV 0C Model Setup 'freqDivider:freqDiv|clkOut'
+Slack : -0.527
+TNS   : -0.979
+
+Type  : Fast 1200mV 0C Model Setup 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -0.472
+TNS   : -1.416
+
+Type  : Fast 1200mV 0C Model Setup 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -0.336
+TNS   : -0.672
+
+Type  : Fast 1200mV 0C Model Setup 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'enable[1]'
+Slack : -0.703
+TNS   : -37.421
+
+Type  : Fast 1200mV 0C Model Hold 'enable[0]'
+Slack : -0.521
+TNS   : -14.485
+
+Type  : Fast 1200mV 0C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -0.290
+TNS   : -4.385
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.208
+TNS   : -0.208
+
+Type  : Fast 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -0.181
+TNS   : -2.107
+
+Type  : Fast 1200mV 0C Model Hold 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Chronometer:chronometer|debouncer:db0|level'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'freqDivider:freqDiv|clkOut'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -0.617
+TNS   : -1.234
+
+Type  : Fast 1200mV 0C Model Removal 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv3|clkOut'
+Slack : -1.000
+TNS   : -96.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv2|clkOut'
+Slack : -1.000
+TNS   : -70.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv3|clkOut'
+Slack : -1.000
+TNS   : -66.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv2|clkOut'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock:clk|freqDivider:freqDiv|clkOut'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv|clkOut'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|Clock:clkIn|freqDivider:freqDiv|clkOut'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|freqDivider:freqDiv|clkOut'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerDown:chronometerDown|freqDivider:freqDiv2|clkOut'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Alarm:alm|freqDivider:freqDiv2|clkOut'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freqDivider:freqDiv|clkOut'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Chronometer:chronometer|debouncer:db0|level'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enable[1]'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enable[0]'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'chronometerDown|audio|clk|PLL|auto_generated|pll1|clk[0]'
+Slack : 4.762
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.435
+TNS   : 0.000
+
+------------------------------------------------------------

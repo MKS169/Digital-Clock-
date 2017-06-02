@@ -1,0 +1,7 @@
+
+State Machine - |clock2|timeMachine:timeMachine|s_state
+Name s_state.Reset s_state.Running s_state.Setup s_state.Stop 
+s_state.Stop 0 0 0 0 
+s_state.Setup 0 0 1 1 
+s_state.Running 0 1 0 1 
+s_state.Reset 1 0 0 1 
