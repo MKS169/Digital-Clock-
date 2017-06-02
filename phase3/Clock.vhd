@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;				--increment decrement shit
+use ieee.numeric_std.all;				
 
 entity Clock is
 	port(CLOCK_50 : in std_logic;
