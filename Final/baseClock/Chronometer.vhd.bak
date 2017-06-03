@@ -1,0 +1,151 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Clock is
+	port(CLOCK_50 : in std_logic;
+	
+		  --KEYS to control functions
+		  
+		  KEY : in std_logic_vector(3 downto 0);
+		  
+		  -- KEY(0) to increment current selection
+        -- KEY(1) to decrement current selection
+        -- KEY(3) to select hours, minutes or seconds
+        -- Keys are all active low
+		  
+		  --Time Displays
+        HEX0 : out std_logic_vector(6 downto 0); -- CS
+        HEX1 : out std_logic_vector(6 downto 0); -- CS
+        HEX2 : out std_logic_vector(6 downto 0); -- S
+        HEX3 : out std_logic_vector(6 downto 0); -- S
+        HEX4 : out std_logic_vector(6 downto 0); -- M
+        HEX5 : out std_logic_vector(6 downto 0); -- M
+		  
+		  --LEDs to test if keys are pressed
+		  LEDG : out std_logic_vector(6 downto 0));
+end Clock;
+
+architecture Behavioral of Clock is
+	
+	signal cs : integer range 0 to 100 := 0;
+	signal sec, min : integer range 0 to 60 := 0; 
+	signal clk, clk2 : std_logic := '0';
+	signal cs2BCD1, cs2BCD, m2BCD1, m2BCD, s2BCD1, s2BCD, cs2Dis1, cs2Dis, m2Dis1, m2Dis, s2Dis1, s2Dis : std_logic_vector(7 downto 0);
+	signal db_KEY : std_logic_vector(3 downto 0);
+begin
+
+	--Convert minutes, seconds and centiseconds to 7Segments
+		bin2BCD: entity work.Bin2BCD(Behavioral)
+						port map(binIn  => std_logic_vector(to_unsigned(sec,8)),
+									binIn1 => std_logic_vector(to_unsigned(min,8)),
+									binIn2 => std_logic_vector(to_unsigned(cs,8)),
+									bcdMS  => s2BCD1,	--Most Significant Second
+									bcdLS  => s2BCD,	--Least Significant Second
+									bcdMS1 => m2BCD1,	--Most Significant Minute
+									bcdLS1 => m2BCD,	--Least Significant Minute
+									bcdMS2 => cs2BCD1,	--Most Significant CentiSecond
+									bcdLS2 => cs2BCD);	--Least Significant CentiSecond
+									
+		b7segH2 : entity work.Bin7SegDecoder(Behavioral) --Most Significant CentiSecond
+						port map(binInput => cs2BCD1(3 downto 0),
+									decOut_n => cs2Dis1(6 downto 0));
+						
+		b7segL2 : entity work.Bin7SegDecoder(Behavioral) --Least Significant CentiSecond
+						port map(binInput => cs2BCD(3 downto 0),
+									decOut_n => cs2Dis(6 downto 0));
+		
+		b7segH : entity work.Bin7SegDecoder(Behavioral) --Most Significant Second
+						port map(binInput => s2BCD1(3 downto 0),
+									decOut_n =>	s2Dis1(6 downto 0));
+				
+		b7segL : entity work.Bin7SegDecoder(Behavioral) --Least Significant Second
+						port map(binInput => s2BCD(3 downto 0),
+									decOut_n => s2Dis(6 downto 0));
+						
+		b7segH1 : entity work.Bin7SegDecoder(Behavioral) --Most Significant Minute
+						port map(binInput => m2BCD1(3 downto 0),
+									decOut_n => m2Dis1(6 downto 0));
+						
+		b7segL1 : entity work.Bin7SegDecoder(Behavioral) --Least Significant Minute
+						port map(binInput => m2BCD(3 downto 0),
+									decOut_n => m2Dis(6 downto 0));
+	
+		freqDiv: entity work.freqDivider(Behavioral) 	--Generate Clock with 1Hz frequency
+						generic map(DIV_FACTOR => 50E6)
+						port map(clkIn => CLOCK_50,
+									clkOut => clk);
+		
+		freqDiv2: entity work.freqDivider(Behavioral) 	--Generate Clock with 3Hz frequency
+						generic map(DIV_FACTOR => 15E6)
+						port map(clkIn => CLOCK_50,
+									clkOut => clk2);
+									
+		db0: entity work.debouncer(v1) 						--Debounce for KEY(0)
+					generic map(clock_frequency => 50.0E6,
+									window_duration => 0.0)
+					port map(clock => CLOCK_50,
+								dirty => KEY(0),
+								clean => db_KEY(0));
+								
+		db1: entity work.debouncer(v1) 						--Debounce for KEY(1)
+					generic map(clock_frequency => 50.0E6,
+									window_duration => 0.0)
+					port map(clock => CLOCK_50,
+								dirty => KEY(1),
+								clean => db_KEY(1));
+							
+		db2: entity work.debouncer(v1) 						--Debounce for KEY(2)
+					generic map(clock_frequency => 50.0E6,
+									window_duration => 0.0)
+					port map(clock => CLOCK_50,
+								dirty => KEY(2),
+								clean => db_KEY(2));
+								
+		db3: entity work.debouncer(v1) 						--Debounce for KEY(3)
+					generic map(clock_frequency => 50.0E6,
+									window_duration => 0.0)
+					port map(clock => CLOCK_50,
+								dirty => KEY(3),
+								clean => db_KEY(3));
+								
+	
+	--Start MM:SS:CS counter	
+	process(clk, clk2)
+	begin
+		
+		
+		--Set once every second
+		
+		if(rising_edge(clk)) then
+		end if;
+		--End MM:SS:CS counter
+		
+		--When KEY(1) is short pressed a "lap" is saved
+		--They blink with frequency = 1Hz
+		
+		--Minutes, Seconds, Centiseconds
+		if(db_KEY(1) = '0' and clk = '1') then
+			HEX5 <= "1111111";
+			HEX4 <= "1111111";
+			HEX3 <= "1111111";
+			HEX2 <= "1111111";
+			HEX1 <= "1111111";
+			HEX0 <= "1111111";
+		else
+			HEX5 <= m2Dis1(6 downto 0);
+			HEX4 <= m2Dis(6 downto 0);
+			HEX3 <= s2Dis1(6 downto 0);
+			HEX2 <= s2Dis(6 downto 0);
+			HEX1 <= cs2Dis1(6 downto 0);
+			HEX0 <= cs2Dis(6 downto 0);
+		end if;
+	
+	end process;
+	
+	LEDG(0) <= not db_key(0); --On if key(0) is pressed after debounce
+	LEDG(2) <= not db_key(1); --On if key(1) is pressed after debounce
+	LEDG(4) <= not db_key(2); --On if key(2) is pressed after debounce	
+	LEDG(6) <= not db_key(3); --On if key(3) is pressed after debounce	
+
+end Behavioral;

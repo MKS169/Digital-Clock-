@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity AlarmSet is
+entity Set is
 	generic(max : integer := 0);
 	port(clk   : in std_logic;
 		  sin   : in std_logic;
 		  sout  : in std_logic;
 		  count : out integer);
-end AlarmSet;
+end Set;
 
-architecture Behavioral of AlarmSet is
+architecture Behavioral of Set is
 
 signal s_count : integer := 0;
 
